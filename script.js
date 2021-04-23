@@ -30,7 +30,6 @@ rollDice.addEventListener(`click`, function() {
         currentPlayer = currentPlayer === 0 ? 1 : 0;
         playerZero.classList.toggle(`player--active`);
         playerOne.classList.toggle(`player--active`);
-
     }
 });
 
