@@ -1,4 +1,5 @@
 'use strict';
+
 const playerZero = document.querySelector(`.player--0`);
 const playerOne = document.querySelector(`.player--1`);
 const dice = document.querySelector(`.dice`);
@@ -8,7 +9,7 @@ const newGame = document.querySelector(`.btn--new`);
 
 let score, currentScore, currentPlayer, activeGame;
 
-const beginningValues = function() {
+const beginningSetting = function() {
     dice.classList.add(`hidden`);
     currentScore = 0;
     currentPlayer = 0;
@@ -23,7 +24,7 @@ const beginningValues = function() {
     }
 };
 
-beginningValues();
+beginningSetting();
 
 rollDice.addEventListener(`click`, function() {
     if (activeGame) {
@@ -52,7 +53,7 @@ hold.addEventListener(`click`, function() {
     }
 });
 
-newGame.addEventListener(`click`, beginningValues);
+newGame.addEventListener(`click`, beginningSetting);
 
 function switchPlayer() {
     currentScore = 0;
