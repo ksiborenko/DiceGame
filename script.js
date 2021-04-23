@@ -44,7 +44,7 @@ hold.addEventListener(`click`, function() {
     if (activeGame) {
         score[currentPlayer] += currentScore;
         document.getElementById(`score--${currentPlayer}`).textContent = score[currentPlayer];
-        if (score[currentPlayer] >= 10) {
+        if (score[currentPlayer] >= 100) {
             document.querySelector(`.player--${currentPlayer}`).classList.add(`player--winner`);
             activeGame = false;
         } else {
