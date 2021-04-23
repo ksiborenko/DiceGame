@@ -6,6 +6,7 @@ const playerZeroObject = document.querySelector(`#score--0`);
 const playerOneObject = document.querySelector(`#score--1`);
 const rollDice = document.querySelector(`.btn--roll`);
 const hold = document.querySelector(`.btn--hold`);
+const newGame = document.querySelector(`.btn--new`);
 let currentScoreObject = null;
 
 let score = [0, 0];
@@ -32,6 +33,16 @@ hold.addEventListener(`click`, function() {
     score[`${activePlayer}`] += currentScore;
     document.getElementById(`score--${activePlayer}`).textContent = score[`${activePlayer}`];
     changePlayer();
+});
+
+newGame.addEventListener(`click`, function() {
+    dice.classList.add(`hidden`);
+    score[0] = 0;
+    score[1] = 0;
+    playerZeroObject.textContent = score[0];
+    playerOneObject.textContent = score[1];
+    playerZero.classList.add(`player--active`);
+    playerOne.classList.remove(`player--active`);
 });
 
 function changePlayer() {
