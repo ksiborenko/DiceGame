@@ -17,16 +17,19 @@ const beginningValues = function() {
     playerZeroScore.textContent = 0;
     playerOneScore.textContent = 0;
 };
+
 beginningValues();
 
 rollDice.addEventListener(`click`, function() {
     dice.classList.remove(`hidden`);
     let random = Math.trunc(Math.random() * 6) + 1;
     dice.src = `dice-${random}.png`;
-    currentScore += random;
     if (random !== 1) {
+        currentScore += random;
         document.getElementById(`current--${currentPlayer}`).textContent = currentScore;
     } else {
+        currentScore = 0;
+        document.getElementById(`current--${currentPlayer}`).textContent = currentScore;
         currentPlayer = currentPlayer === 0 ? 1 : 0;
         playerZero.classList.toggle(`player--active`);
         playerOne.classList.toggle(`player--active`);
