@@ -36,3 +36,7 @@ rollDice.addEventListener(`click`, function() {
     }
 });
 
+hold.addEventListener(`click`, function() {
+    score[currentPlayer] = currentScore;
+});
+
