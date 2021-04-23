@@ -13,6 +13,8 @@ const beginningValues = function() {
     dice.classList.add(`hidden`);
     score = [0, 0];
     currentScore = 0;
+
+
     currentPlayer = 0;
     playerZeroScore.textContent = 0;
     playerOneScore.textContent = 0;
